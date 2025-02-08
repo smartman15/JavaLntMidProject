@@ -57,11 +57,13 @@ public class Main {
 				data.add(k1);
 				
 				for(int i = 0; i < data.size(); i++) {
-					System.out.println(data.get(i).kode);
-					System.out.println(data.get(i).nama);
-					System.out.println(data.get(i).kelamin);
-					System.out.println(data.get(i).jabatan);
-					System.out.println(data.get(i).gaji);
+					System.out.println("Kode: " + data.get(i).kode);
+					System.out.println("Nama: " + data.get(i).nama);
+					System.out.println("Jenis kelamin: " + data.get(i).kelamin);
+					System.out.println("Jabatan: " + data.get(i).jabatan);
+					System.out.println("Gaji: " + data.get(i).gaji);
+					System.out.println();
+					System.out.println();
 				}
 				
 			}
