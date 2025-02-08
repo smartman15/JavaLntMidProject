@@ -39,11 +39,11 @@ public class Main {
 //					● Supervisor = Rp. 6 Juta.
 //					● Admin = Rp. 4 Juta.
 				int gaji = 0;
-				if(jabatan == "Manager") {
+				if(jabatan.equals("Manager")) {
 					gaji = 8000000;
-				} else if(jabatan == "Supervisor") {
+				} else if(jabatan.equals("Supervisor")) {
 					gaji = 6000000;
-				} else if(jabatan == "Admin") {
+				} else if(jabatan.equals("Admin")) {
 					gaji = 4000000;
 				} 
 				
