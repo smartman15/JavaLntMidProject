@@ -14,6 +14,7 @@ public class Main {
 			// exit
 			if(menu == 0) {
 				System.out.println("Goodbye!");
+				break;
 			}
 			
 			// jika user memilih 1 (insert data karyawan)
