@@ -11,11 +11,13 @@ public class Main {
 			System.out.println("choose something bruh");
 			int menu = scan.nextInt(); scan.nextLine();
 			
-			
-			
+			// exit
+			if(menu == 0) {
+				System.out.println("Goodbye!");
+			}
 			
 			// jika user memilih 1 (insert data karyawan)
-			if(menu == 1) {
+			else if(menu == 1) {
 				// minta input data untuk karyawan
 				// kode karyawan terdiri dari MM-XXXX dimana MM adalah 2 huruf afabet yang di random 
 				// dilanjutkan dengan 4 angka numeric yang di random (contoh : ZX-3145),
@@ -61,7 +63,6 @@ public class Main {
 					System.out.println(data.get(i).gaji);
 				}
 				
-				break;
 			}
 				
 			
