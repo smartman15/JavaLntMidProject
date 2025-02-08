@@ -1,8 +1,9 @@
+import java.util.ArrayList;
 
 public class Main {
 
 	public Main() {
-		// TODO Auto-generated constructor stub
+		ArrayList<Karyawan> data = new ArrayList<Karyawan>();
 	}
 
 	public static void main(String[] args) {
