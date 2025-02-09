@@ -55,19 +55,21 @@ public class Main {
 				// lalu masukkan data ke dalam arraylist karyawan
 				Karyawan k1 = new Karyawan(kode, nama, kelamin, jabatan, gaji);
 				data.add(k1);
-				
-				System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25s\n", "No", "Kode Karyawan", "Nama Karyawan", "Jenis Kelamin", "Jabatan", "Gaji Karyawan");
-				for(int i = 0; i < data.size(); i++) {
-					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25d\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
-					
-				}
-				
 			}
 				
 			
 			
 			// jika user memilih 2 (view data karyawan)
+			else if(menu == 2) {
 				// gunakan for loop untuk print data semua karyawan dari arraylist
+				System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25s\n", "No", "Kode Karyawan", "Nama Karyawan", "Jenis Kelamin", "Jabatan", "Gaji Karyawan");
+				for(int i = 0; i < data.size(); i++) {
+					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25d\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
+					
+				}
+			}
+				
+			
 			
 			// jika user memilih 3 (update data karyawan)
 				// gunakan for loop untuk print data semua karyawan (dengan nomor urutan juga)
