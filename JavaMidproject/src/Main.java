@@ -9,6 +9,9 @@ public class Main {
 			// sort arraylist berdasarkan nama karyawan
 			data.sort((a, b) -> a.nama.compareTo(b.nama));
 			
+			// hitung length ArrayList
+			int length = data.size();
+			
 			// minta user untuk memilih dari 4 menu (insert data karyawan, view data karyawan, 
 			// update data karyawan, dan delete data karyawan)
 			System.out.println("choose something bruh");
@@ -86,7 +89,6 @@ public class Main {
 				System.out.println("Input nomor urutan karyawan yang ingin diupdate: ");
 				int nomor = scan.nextInt(); scan.nextLine();
 				// masukkan data karyawan
-				int length = data.size();
 				for(int i = 0; i < length; i++) {
 					if((i+1) == nomor) {
 						
