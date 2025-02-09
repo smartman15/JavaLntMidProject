@@ -34,11 +34,11 @@ public class Main {
 				nama = scan.nextLine(); 
 				// jenis kelamin (Laki-Laki / Perempuan)
 				String kelamin;
-				System.out.println("Masukkan jenis kelamin (Laki-Laki / Perempuan):");
+				System.out.println("Masukkan jenis kelamin (Laki-Laki / Perempuan) (Case Sensitive):");
 				kelamin = scan.nextLine(); 
 				// jabatan (Manager / Supervisor / Admin)
 				String jabatan;
-				System.out.println("Masukkan jabatan (Manager / Supervisor / Admin):");
+				System.out.println("Masukkan jabatan (Manager / Supervisor / Admin) (Case Sensitive):");
 				jabatan = scan.nextLine(); 
 //				Untuk gaji karyawan terdiri dari:
 //					● Manager = Rp. 8 Juta.
@@ -64,7 +64,6 @@ public class Main {
 			
 			// jika user memilih 2 (view data karyawan)
 			else if(menu == 2) {
-				
 				// gunakan for loop untuk print data semua karyawan dari arraylist
 				System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25s\n", "No", "Kode Karyawan", "Nama Karyawan", "Jenis Kelamin", "Jabatan", "Gaji Karyawan");
 				for(int i = 0; i < data.size(); i++) {
