@@ -6,6 +6,9 @@ public class Main {
 	public Main() {
 		ArrayList<Karyawan> data = new ArrayList<Karyawan>();
 		while(true) {
+			// sort arraylist berdasarkan nama karyawan
+			data.sort((a, b) -> a.nama.compareTo(b.nama));
+			
 			// minta user untuk memilih dari 4 menu (insert data karyawan, view data karyawan, 
 			// update data karyawan, dan delete data karyawan)
 			System.out.println("choose something bruh");
@@ -61,6 +64,7 @@ public class Main {
 			
 			// jika user memilih 2 (view data karyawan)
 			else if(menu == 2) {
+				
 				// gunakan for loop untuk print data semua karyawan dari arraylist
 				System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25s\n", "No", "Kode Karyawan", "Nama Karyawan", "Jenis Kelamin", "Jabatan", "Gaji Karyawan");
 				for(int i = 0; i < data.size(); i++) {
