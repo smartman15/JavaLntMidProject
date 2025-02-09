@@ -132,8 +132,24 @@ public class Main {
 				
 			
 			// jika user memilih 4 (delete data karyawan)
+			else if(menu == 4) {
 				// gunakan for loop untuk print data semua karyawan
+				System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25s\n", "No", "Kode Karyawan", "Nama Karyawan", "Jenis Kelamin", "Jabatan", "Gaji Karyawan");
+				for(int i = 0; i < data.size(); i++) {
+					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25d\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
+					
+				}
+				
 				// minta input nomor urutan karyawan yang ingin dihapus
+				System.out.println("Input nomor urutan karyawan yang ingin dihapus: ");
+				int nomor = scan.nextInt(); scan.nextLine();
+				String kode = data.get(nomor-1).kode;
+				
+				data.remove(nomor-1);
+				
+				System.out.println("Karyawan dengan kode " + kode + " berhasil dihapus");
+			}
+				
 			
 		}
 	}
