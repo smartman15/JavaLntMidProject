@@ -49,9 +49,16 @@ public class Main {
 				
 				
 				// jika count == 3
+				if(countManager == 3) {
 					// jika count % 3 == 0 atau count % 3 == 1 atau count % 3 == 2
+					if(countManager % 3 == 0 || countManager % 3 == 1 || countManager % 3 == 2) {
 						// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
+						int gajiTambahan = data.get(i).gaji * 0.1;
+						data.get(i).gaji += gajiTambahan;
 						
+					}
+						
+				}
 					
 			}
 				
