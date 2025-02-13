@@ -39,22 +39,19 @@ public class Main {
 					countManager++;
 				}
 				
-				if(data.get(i).getJabatan().equals("Supervisor")) {
-					countSupervisor++;
-				}
-				
-				if(data.get(i).getJabatan().equals("Admin")) {
-					countAdmin++;
-				}
-				
 				
 				// jika count == 3
 				if(countManager == 3) {
 					// jika count % 3 == 0 atau count % 3 == 1 atau count % 3 == 2
 					if(countManager % 3 == 0 || countManager % 3 == 1 || countManager % 3 == 2) {
-						// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
-						double gajiTambahan = data.get(i).gaji * 0.1;
-						data.get(i).gaji += gajiTambahan;
+						for(int j = i; j >= 0; j--) {
+							if(data.get(i).getJabatan().equals("Manager")) {
+								// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
+								double gajiTambahan = data.get(i).gaji * 0.1;
+								data.get(i).gaji += gajiTambahan;
+							}
+						}
+						
 						
 					}
 						
