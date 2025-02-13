@@ -53,7 +53,7 @@ public class Main {
 					// jika count % 3 == 0 atau count % 3 == 1 atau count % 3 == 2
 					if(countManager % 3 == 0 || countManager % 3 == 1 || countManager % 3 == 2) {
 						// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
-						int gajiTambahan = data.get(i).gaji * 0.1;
+						float gajiTambahan = data.get(i).gaji * 0.1;
 						data.get(i).gaji += gajiTambahan;
 						
 					}
@@ -94,7 +94,7 @@ public class Main {
 //					● Manager = Rp. 8 Juta.
 //					● Supervisor = Rp. 6 Juta.
 //					● Admin = Rp. 4 Juta.
-				int gaji = 0;
+				float gaji = 0;
 				if(jabatan.equals("Manager")) {
 					gaji = 8000000;
 				} else if(jabatan.equals("Supervisor")) {
@@ -161,7 +161,7 @@ public class Main {
 //							● Manager = Rp. 8 Juta.
 //							● Supervisor = Rp. 6 Juta.
 //							● Admin = Rp. 4 Juta.
-						int gaji = 0;
+						float gaji = 0;
 						if(jabatan.equals("Manager")) {
 							gaji = 8000000;
 						} else if(jabatan.equals("Supervisor")) {

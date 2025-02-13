@@ -4,7 +4,7 @@ public class Karyawan {
 	String nama;
 	String kelamin;
 	String jabatan;
-	int gaji;
+	float gaji;
 	
 	public Karyawan(String kode, String nama, String kelamin, String jabatan, int gaji) {
 		super();
