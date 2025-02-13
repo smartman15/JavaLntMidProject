@@ -17,6 +17,24 @@ public class Main {
 			System.out.println("choose something bruh");
 			int menu = scan.nextInt(); scan.nextLine();
 			
+			
+			// bonus gaji karyawan (naikan gaji karyawannya jika ada penambahan 
+			// 3 orang yang memiliki jabatan yang sama.)
+			// Contoh:
+//			jika sudah ada 4 orang admin maka 3 orang admin pertama yang bekerja
+//			akan mendapatkan bonus. Selanjutnya, jika sudah ada 7 orang admin
+//			maka 6 orang admin pertama yang bekerja akan mendapatkan bonus.
+//			Berikut daftar bonus gaji karyawan:
+//				● Manager = 10% dari gaji sebelumnya.
+//				● Supervisor = 7,5% dari gaji sebelumnya.
+//				● Admin = 5% dari gaji sebelumnya.
+			
+			// bikin variabel count untuk masing-masing jabatan (Manager / Supervisor / Admin) mulai dari 1
+			// buatkan for loop untuk cek jumlah orang dengan jabatan tertentu
+				// jika count == 3
+					// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
+					
+			
 			// exit
 			if(menu == 0) {
 				System.out.println("Goodbye!");
