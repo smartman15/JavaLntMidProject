@@ -4,9 +4,9 @@ public class Karyawan {
 	String nama;
 	String kelamin;
 	String jabatan;
-	float gaji;
+	double gaji;
 	
-	public Karyawan(String kode, String nama, String kelamin, String jabatan, float gaji) {
+	public Karyawan(String kode, String nama, String kelamin, String jabatan, double gaji) {
 		super();
 		this.kode = kode;
 		this.nama = nama;
@@ -47,11 +47,11 @@ public class Karyawan {
 		this.jabatan = jabatan;
 	}
 
-	public float getGaji() {
+	public double getGaji() {
 		return gaji;
 	}
 
-	public void setGaji(float gaji) {
+	public void setGaji(double gaji) {
 		this.gaji = gaji;
 	}
 	
