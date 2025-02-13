@@ -32,7 +32,8 @@ public class Main {
 			// bikin variabel count untuk masing-masing jabatan (Manager / Supervisor / Admin) mulai dari 1
 			// buatkan for loop untuk cek jumlah orang dengan jabatan tertentu
 				// jika count == 3
-					// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
+					// jika count % 3 == 0 atau count % 3 == 1 atau count % 3 == 2
+						// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
 					
 			
 			// exit
