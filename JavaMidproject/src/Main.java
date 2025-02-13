@@ -29,11 +29,32 @@ public class Main {
 //				● Supervisor = 7,5% dari gaji sebelumnya.
 //				● Admin = 5% dari gaji sebelumnya.
 			
-			// bikin variabel count untuk masing-masing jabatan (Manager / Supervisor / Admin) mulai dari 1
+			// bikin variabel count untuk masing-masing jabatan (Manager / Supervisor / Admin) mulai dari 0
+			int countManager = 0;
+			int countSupervisor = 0;
+			int countAdmin = 0;
 			// buatkan for loop untuk cek jumlah orang dengan jabatan tertentu
+			for(int i = 0; i < length; i++) {
+				if(data.get(i).getJabatan().equals("Manager")) {
+					countManager++;
+				}
+				
+				if(data.get(i).getJabatan().equals("Supervisor")) {
+					countSupervisor++;
+				}
+				
+				if(data.get(i).getJabatan().equals("Admin")) {
+					countAdmin++;
+				}
+				
+				
 				// jika count == 3
 					// jika count % 3 == 0 atau count % 3 == 1 atau count % 3 == 2
 						// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
+						
+					
+			}
+				
 					
 			
 			// exit
