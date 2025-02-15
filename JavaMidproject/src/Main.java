@@ -5,60 +5,38 @@ public class Main {
 	Scanner scan = new Scanner(System.in);
 	public Main() {
 		ArrayList<Karyawan> data = new ArrayList<Karyawan>();
+//		data.add(new Karyawan("zx-3145", "Aaron Sebastian", "Laki", "Supervisor", 6000000));
+//		data.add(new Karyawan("zx-3145", "Alicia Gabrielle", "Perempuan", "Supervisor", 6000000));
+//		data.add(new Karyawan("zx-3145", "Calvin Nicholas", "Laki", "Supervisor", 6000000));
+//		data.add(new Karyawan("zx-3145", "Felix Jonathan", "Laki", "Manager", 565));
+//		data.add(new Karyawan("zx-3145", "Herman Kuding", "Laki", "Supervisor", 6000000));
+		int countManager = 0;
+		int countSupervisor = 0;
+		int countAdmin = 0;
+		
 		while(true) {
+			// minta user untuk memilih dari 4 menu (insert data karyawan, view data karyawan, 
+			// update data karyawan, dan delete data karyawan)
+			System.out.println("Pilih opsi:");
+			System.out.println("(1) Insert data karyawan");
+			System.out.println("(2) View data karyawan");
+			System.out.println("(3) Update data karyawan");
+			System.out.println("(4) Delete data karyawan");
+			
+			System.out.println("countManager = " + countManager);
+			System.out.println("countSupervisor = " + countSupervisor);
+			System.out.println("countAdmin = " + countAdmin);
+						
+						
 			// sort arraylist berdasarkan nama karyawan
 			data.sort((a, b) -> a.nama.compareTo(b.nama));
 			
 			// hitung length ArrayList
 			int length = data.size();
 			
-			// minta user untuk memilih dari 4 menu (insert data karyawan, view data karyawan, 
-			// update data karyawan, dan delete data karyawan)
-			System.out.println("choose something bruh");
+			
 			int menu = scan.nextInt(); scan.nextLine();
 			
-			
-			// bonus gaji karyawan (naikan gaji karyawannya jika ada penambahan 
-			// 3 orang yang memiliki jabatan yang sama.)
-			// Contoh:
-//			jika sudah ada 4 orang admin maka 3 orang admin pertama yang bekerja
-//			akan mendapatkan bonus. Selanjutnya, jika sudah ada 7 orang admin
-//			maka 6 orang admin pertama yang bekerja akan mendapatkan bonus.
-//			Berikut daftar bonus gaji karyawan:
-//				● Manager = 10% dari gaji sebelumnya.
-//				● Supervisor = 7,5% dari gaji sebelumnya.
-//				● Admin = 5% dari gaji sebelumnya.
-			
-			// bikin variabel count untuk masing-masing jabatan (Manager / Supervisor / Admin) mulai dari 0
-			int countManager = 0;
-			int countSupervisor = 0;
-			int countAdmin = 0;
-			// buatkan for loop untuk cek jumlah orang dengan jabatan tertentu
-			for(int i = 0; i < length; i++) {
-				if(data.get(i).getJabatan().equals("Manager")) {
-					countManager++;
-				}
-				
-				
-				// jika count == 3
-				if(countManager == 3) {
-					for(int j = i; j >= 0; j--) {
-						if(data.get(i).getJabatan().equals("Manager")) {
-							// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
-							double gajiTambahan = data.get(i).gaji * 0.1;
-							data.get(i).gaji += gajiTambahan;
-						}
-					}
-						
-						
-					
-						
-				}
-				
-					
-			}
-				
-					
 			
 			// exit
 			if(menu == 0) {
@@ -93,10 +71,13 @@ public class Main {
 				double gaji = 0;
 				if(jabatan.equals("Manager")) {
 					gaji = 8000000;
+					countManager += 1;
 				} else if(jabatan.equals("Supervisor")) {
 					gaji = 6000000;
+					countSupervisor += 1;
 				} else if(jabatan.equals("Admin")) {
 					gaji = 4000000;
+					countAdmin += 1;
 				} 
 				
 				
@@ -104,6 +85,21 @@ public class Main {
 				// lalu masukkan data ke dalam arraylist karyawan
 				Karyawan k1 = new Karyawan(kode, nama, kelamin, jabatan, gaji);
 				data.add(k1);
+				
+				
+				if(countSupervisor == 3) {
+					for(int i = length; i >= 0 && countSupervisor > 0; i--) {
+						if(data.get(i).getJabatan().equals("Supervisor")) {
+							// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
+							double gajiTambahan = data.get(i).gaji * 0.075;
+							data.get(i).gaji += gajiTambahan;
+							countSupervisor--;
+						}
+					}
+//					countSupervisor = 0;
+				}
+				
+				
 			}
 				
 			
@@ -113,7 +109,7 @@ public class Main {
 				// gunakan for loop untuk print data semua karyawan dari arraylist
 				System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25s\n", "No", "Kode Karyawan", "Nama Karyawan", "Jenis Kelamin", "Jabatan", "Gaji Karyawan");
 				for(int i = 0; i < data.size(); i++) {
-					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25d\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
+					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25.2f\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
 					
 				}
 			}
@@ -125,7 +121,7 @@ public class Main {
 				// gunakan for loop untuk print data semua karyawan (dengan nomor urutan juga)
 				System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25s\n", "No", "Kode Karyawan", "Nama Karyawan", "Jenis Kelamin", "Jabatan", "Gaji Karyawan");
 				for(int i = 0; i < data.size(); i++) {
-					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25d\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
+					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25f\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
 					
 				}
 				// minta user untuk pilih nomor urutan karyawan yang ingin diupdate
