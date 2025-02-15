@@ -28,8 +28,7 @@ public class Main {
 			System.out.println("countAdmin = " + countAdmin);
 						
 						
-			// sort arraylist berdasarkan nama karyawan
-			data.sort((a, b) -> a.nama.compareTo(b.nama));
+			
 			
 			// hitung length ArrayList
 			int length = data.size();
@@ -99,7 +98,8 @@ public class Main {
 //					countSupervisor = 0;
 				}
 				
-				
+				// sort arraylist berdasarkan nama karyawan
+				data.sort((a, b) -> a.nama.compareTo(b.nama));
 			}
 				
 			
