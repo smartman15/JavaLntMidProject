@@ -23,17 +23,10 @@ public class Main {
 			System.out.println("(3) Update data karyawan");
 			System.out.println("(4) Delete data karyawan");
 			
-			System.out.println("countManager = " + countManager);
-			System.out.println("countSupervisor = " + countSupervisor);
-			System.out.println("countAdmin = " + countAdmin);
 						
-						
-			
 			
 			// hitung length ArrayList
 			int length = data.size();
-			
-			
 			int menu = scan.nextInt(); scan.nextLine();
 			
 			
