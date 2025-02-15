@@ -85,7 +85,19 @@ public class Main {
 				Karyawan k1 = new Karyawan(kode, nama, kelamin, jabatan, gaji);
 				data.add(k1);
 				
+				// bonus gaji untuk manager
+				if(countManager == 3) {
+					for(int i = length; i >= 0 && countManager > 0; i--) {
+						if(data.get(i).getJabatan().equals("Supervisor")) {
+							// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
+							double gajiTambahan = data.get(i).gaji * 0.075;
+							data.get(i).gaji += gajiTambahan;
+							countManager--;
+						}
+					}
+				}
 				
+				// bonus gaji untuk supervisor
 				if(countSupervisor == 3) {
 					for(int i = length; i >= 0 && countSupervisor > 0; i--) {
 						if(data.get(i).getJabatan().equals("Supervisor")) {
@@ -95,8 +107,20 @@ public class Main {
 							countSupervisor--;
 						}
 					}
-//					countSupervisor = 0;
 				}
+				
+				// bonus gaji untuk admin
+				if(countAdmin == 3) {
+					for(int i = length; i >= 0 && countAdmin > 0; i--) {
+						if(data.get(i).getJabatan().equals("Supervisor")) {
+							// increment gaji sesuai dengan persentase daftar bonus gaji karyawan
+							double gajiTambahan = data.get(i).gaji * 0.075;
+							data.get(i).gaji += gajiTambahan;
+							countAdmin--;
+						}
+					}
+				}
+				
 				
 				// sort arraylist berdasarkan nama karyawan
 				data.sort((a, b) -> a.nama.compareTo(b.nama));
