@@ -18,6 +18,7 @@ public class Main {
 			// minta user untuk memilih dari 4 menu (insert data karyawan, view data karyawan, 
 			// update data karyawan, dan delete data karyawan)
 			System.out.println("Pilih opsi:");
+			System.out.println("(0) Exit");
 			System.out.println("(1) Insert data karyawan");
 			System.out.println("(2) View data karyawan");
 			System.out.println("(3) Update data karyawan");
