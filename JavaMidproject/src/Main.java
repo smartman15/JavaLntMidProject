@@ -192,7 +192,7 @@ public class Main {
 				// gunakan for loop untuk print data semua karyawan
 				System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25s\n", "No", "Kode Karyawan", "Nama Karyawan", "Jenis Kelamin", "Jabatan", "Gaji Karyawan");
 				for(int i = 0; i < data.size(); i++) {
-					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25d\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
+					System.out.printf("%-25s | %-25s | %-25s | %-25s | %-25s | %-25f\n", i+1, data.get(i).kode, data.get(i).nama, data.get(i).kelamin, data.get(i).jabatan, data.get(i).gaji);
 					
 				}
 				
